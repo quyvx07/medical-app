@@ -6,6 +6,11 @@
   font-family: var(--font-noto-sans-jp), var(--font-inter);
 }
 
+html {
+  font-size: 62.5%;
+  min-height: 100vh;
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;

@@ -1,26 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 const colors = require("tailwindcss/colors");
 
-const COLOR_SYSTEM = {
-  "ds-primary": {
-    300: "#FFCC21",
-    400: "#FF963C",
-    500: "#EA6C00",
-  },
-  "ds-secondary": "#8FE9D0",
-  "ds-dark": {
-    500: "#414141",
-    600: "#2E2E2E",
-  },
-  "ds-gray": "#777777",
-};
+const { SPACING, COLOR_SYSTEM } = require("./tailwind.constant");
 
 module.exports = {
-  content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
+  content: ["./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       backgroundImage: {
@@ -35,6 +19,41 @@ module.exports = {
       colors: {
         ...colors,
         ...COLOR_SYSTEM,
+      },
+      spacing: {
+        ...SPACING,
+      },
+      fontSize: {
+        "xs-10": ["1rem", "1.2rem"],
+        xs: ["1.2rem", "1.6rem"],
+        sm: ["1.4rem", "2rem"],
+        base: ["1.6rem", "2.3rem"],
+        lg: ["1.8rem", "2.8rem"],
+        xl: ["2rem", "2.8rem"],
+        "2xl": ["2.4rem", "3.2rem"],
+        "3xl": ["3rem", "3.6rem"],
+        "4xl": ["3.6rem", "4rem"],
+        "5xl": ["4.8rem", 1],
+        "6xl": ["6rem", 1],
+        "7xl": ["7.2rem", 1],
+        "8xl": ["9.6rem", 1],
+        "9xl": ["12.8rem", 1],
+      },
+      screens: {
+        xs: "320px",
+        sm: "480px",
+        md: "794px",
+        lg: "1240px",
+        xl: "1652px",
+      },
+      borderRadius: {
+        sm: ".2rem",
+        DEFAULT: ".4rem",
+        md: ".6rem",
+        lg: ".8rem",
+        xl: "1.2rem",
+        "2xl": "1.6rem",
+        "3xl": "2.4rem",
       },
     },
   },
