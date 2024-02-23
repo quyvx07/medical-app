@@ -40,6 +40,7 @@ export const COLOR_SYSTEM = {
   },
   "ds-secondary": "#8FE9D0",
   "ds-dark": {
+    400: "#707070",
     500: "#414141",
     600: "#2E2E2E",
   },

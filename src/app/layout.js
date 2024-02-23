@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" data-theme="light">
       <body className={`${notoSansJP.variable} ${inter.variable}`}>
-        <main>
+        <main className={"text-ds-dark-500"}>
           <Header />
           {children}
           <Footer />

@@ -29,8 +29,7 @@ export default function Home() {
           ))}
       </div>
       <div className="mt-[2.8rem] mb-[6.4rem] text-center">
-
-      <BaseButton>記録をもっと見る</BaseButton>
+        <BaseButton>記録をもっと見る</BaseButton>
       </div>
     </div>
   );

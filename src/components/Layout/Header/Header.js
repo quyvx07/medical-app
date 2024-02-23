@@ -8,8 +8,10 @@ import { NAVIGATION } from "@/utils/constant";
 
 export default function Header() {
   return (
-    <div className="bg-ds-dark-500 text-white px-[16rem] py-4 flex flex-row justify-between">
-      <Logo className="text-ds-primary-400 ml-4" />
+    <header className="bg-ds-dark-500 text-white px-[16rem] py-4 flex flex-row justify-between">
+      <NextLink href="/">
+        <Logo className="text-ds-primary-400 ml-4" />
+      </NextLink>
       <div className="flex flex-row">
         <ul className="flex flex-row list-none text-ds-primary-400">
           {NAVIGATION &&
@@ -19,6 +21,6 @@ export default function Header() {
           <IconMenu className="text-white" />
         </NextLink>
       </div>
-    </div>
+    </header>
   );
 }
