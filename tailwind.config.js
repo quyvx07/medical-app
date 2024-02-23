@@ -11,6 +11,7 @@ module.exports = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "hexagon": "url('/img/bg-hexagon.svg')",
       },
       fontFamily: {
         "noto-sans-jp": ["var(--font-noto-sans-jp)"],
@@ -28,8 +29,8 @@ module.exports = {
         xs: ["1.2rem", "1.6rem"],
         sm: ["1.4rem", "2rem"],
         base: ["1.6rem", "2.3rem"],
-        lg: ["1.8rem", "2.8rem"],
-        xl: ["2rem", "2.8rem"],
+        lg: ["1.8rem", "2.6rem"],
+        xl: ["2rem", "2.4rem"],
         "2xl": ["2.4rem", "3.2rem"],
         "3xl": ["3rem", "3.6rem"],
         "4xl": ["3.6rem", "4rem"],

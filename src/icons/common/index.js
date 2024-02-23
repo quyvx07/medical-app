@@ -5,3 +5,4 @@ export { default as IconInfo } from "./IconInfo";
 export { default as IconKnife } from "./IconKnife";
 export { default as IconMemo } from "./IconMemo";
 export { default as IconMenu } from "./IconMenu";
+export { default as IconUp } from "./IconUp";
