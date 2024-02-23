@@ -4,7 +4,9 @@ import { IconMenu } from "@/icons/common";
 import { Logo } from "@/icons/logo";
 import NavItem from "./NavItem";
 import NextLink from "next/link";
-import { NAVIGATION } from "@/utils/constant";
+import { MENU_NAVIGATION, NAVIGATION } from "@/utils/constant";
+import Dropdown from "@/ui/Dropdown/Dropdown";
+import MenuItem from "./MenuItem";
 
 export default function Header() {
   return (
@@ -17,9 +19,14 @@ export default function Header() {
           {NAVIGATION &&
             NAVIGATION.map((value, idx) => <NavItem key={idx} {...value} />)}
         </ul>
-        <NextLink className="ml-4" href={"/"}>
-          <IconMenu className="text-white" />
-        </NextLink>
+        <Dropdown>
+            <ul className="absolute bottom-0 bg-ds-gray translate-y-[100%] right-0 w-[280px] z-20">
+              {MENU_NAVIGATION &&
+                MENU_NAVIGATION.map((value, idx) => (
+                  <MenuItem key={idx} {...value} />
+                ))}
+            </ul>
+        </Dropdown>
       </div>
     </header>
   );

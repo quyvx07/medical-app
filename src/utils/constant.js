@@ -18,6 +18,32 @@ export const NAVIGATION = [
     icon_info: 1,
   },
 ];
+export const MENU_NAVIGATION = [
+  {
+    label: "自分の記録",
+    path: "/myrecord",
+  },
+  {
+    label: "体重グラフ",
+    path: "/",
+  },
+  {
+    label: "目標",
+    path: "/",
+  },
+  {
+    label: "選択中のコース",
+    path: "/",
+  },
+  {
+    label: "コラム一覧",
+    path: "/mycolumn",
+  },
+  {
+    label: "設定",
+    path: "/",
+  },
+];
 
 export const PHOTOS = [
   {
