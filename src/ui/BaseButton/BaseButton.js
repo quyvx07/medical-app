@@ -20,7 +20,7 @@ export default function BaseButton({
       aria-pressed={isPressed ? "true" : "false"}
       disabled={!isPressed}
       className={twMerge(
-        "min-w-[29.6rem] min-h-[5.6rem] text-lg bg-btn font-light cursor-pointer",
+        "min-w-[29.6rem] min-h-[5.6rem] text-lg bg-btn font-light cursor-pointer rounded-md text-white",
         buttonStatusStyle,
         className
       )}
