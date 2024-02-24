@@ -12,13 +12,25 @@ export default function Home() {
   return (
     <div>
       <div className="flex flex-row">
-        <BaseImage
-          className={"aspect-[540/316] w-[42%]"}
-          src={"/img/d01.jpg"}
-          width={540}
-          height={316}
-          style={{ objectFit: "cover" }}
-        />
+        <div className={"relative w-[42%]"}>
+          <BaseImage
+            className={"aspect-[540/316]"}
+            src={"/img/d01.jpg"}
+            width={540}
+            height={316}
+            style={{ objectFit: "cover" }}
+          />
+          <div
+            className={
+              "absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] flex flex-row justify-center items-end text-white"
+            }
+          >
+            <span className="text-lg font-inter font-normal">05/21</span>
+            <span className="text-2xl-25 leading-[3rem] font-inter font-normal">
+              75%
+            </span>
+          </div>
+        </div>
         <div className="flex-1">
           <Chart />
         </div>
