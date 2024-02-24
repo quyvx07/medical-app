@@ -1,5 +1,12 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## Lib
+node: v18.17.1
+
+## NPM SCRIPTS
+`npm run icons`: convert svg icon to js
+`npm install`: install library
+
 ## Getting Started
 
 First, run the development server:
