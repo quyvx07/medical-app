@@ -1,6 +1,6 @@
 import NextLink from "next/link";
-import { twMerge } from "tailwind-merge";
 import BaseIcon from "@/ui/BaseIcon/BaseIcon";
+import clsx from "clsx";
 
 export default function NavItem({
   label,
@@ -13,12 +13,7 @@ export default function NavItem({
   return (
     <li className={className}>
       <NextLink
-        className={twMerge(
-          "flex flex-row gap-[0.6rem] w-[16rem] px-2 items-center",
-          {
-            "!text-ds-primary-400": active,
-          }
-        )}
+        className={"flex flex-row gap-[0.6rem] w-[16rem] px-2 items-center"}
         href={path}
       >
         {icon && icon_info ? (
@@ -26,7 +21,16 @@ export default function NavItem({
         ) : (
           icon?.()
         )}
-        {label && <span className={"text-white text-base"}>{label}</span>}
+        {label && (
+          <span
+            className={clsx(
+              "text-white text-base",
+              {"!text-ds-primary-400" : active}
+            )}
+          >
+            {label}
+          </span>
+        )}
       </NextLink>
     </li>
   );

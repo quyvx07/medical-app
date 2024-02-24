@@ -8,7 +8,7 @@ export default function MyExercise() {
         <span className="text-xl-22 ml-[1.2rem]">2021.05.21</span>
       </div>
       <div className="flex flex-row h-[192px] overflow-y-scroll">
-        <section className="mt-2 grid grid-cols-2 gap-x-[4rem] w-full">
+        <section className="mt-2 grid grid-cols-2 gap-x-[4rem] gap-y-2 w-full">
           {Array.from(Array(40).keys()).map((item) => (
             <MyExerciseItem key={item} />
           ))}

@@ -1,12 +1,11 @@
+import { clsx } from "@/utils/common";
 import NextLink from "next/link";
-import { twMerge } from "tailwind-merge";
-import BaseIcon from "@/ui/BaseIcon/BaseIcon";
 
 export default function MenuItem({ label, path = "/", active, className }) {
   return (
-    <li className={twMerge("px-[32px] py-[22px] border-b border-ds-dark-600", className)}>
+    <li className={clsx("px-[32px] py-[22px] border-b border-ds-dark-600", className)}>
       <NextLink
-        className={twMerge({
+        className={clsx({
           "!text-ds-primary-400": active,
         })}
         href={path}

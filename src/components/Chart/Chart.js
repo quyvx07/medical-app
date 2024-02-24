@@ -1,5 +1,6 @@
 "use client";
 
+import { clsx } from "@/utils/common";
 import React, { useState, useEffect } from "react";
 import {
   LineChart,
@@ -9,6 +10,7 @@ import {
   CartesianGrid,
   Tooltip,
   Legend,
+  ResponsiveContainer,
 } from "recharts";
 
 const data = [
@@ -26,33 +28,38 @@ const data = [
   { name: "12月", uv: 1990, pv: 3008 },
 ];
 
-export default function Chart(options) {
+export default function Chart({ className, aspect = 589 / 294 }) {
   return (
-    <div className="bg-ds-dark-600 pt-[6px] pl-[54px]">
-      <LineChart
-        data={data}
-        width={590}
-        height={300}
-        margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
-      >
-        <XAxis dataKey="name" stroke="#fff" />
-        {/* <YAxis /> */}
-        <CartesianGrid strokeDasharray="3 3" stroke="#fff" />
-        <Tooltip />
-        {/* <Legend /> */}
-        <Line
-          type="monotone"
-          dataKey="uv"
-          stroke="#FFCC21"
-          activeDot={{ r: 8 }}
-        />
-        <Line
-          type="monotone"
-          dataKey="pv"
-          stroke="#8FE9D0"
-          activeDot={{ r: 8 }}
-        />
-      </LineChart>
+    <div
+      className={clsx(
+        "bg-ds-dark-600 py-[6px] pl-[54px] pr-[98px]",
+        className
+      )}
+    >
+      <ResponsiveContainer width="100%" aspect={aspect}>
+        <LineChart
+          data={data}
+          margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
+        >
+          <XAxis dataKey="name" stroke="#fff" />
+          {/* <YAxis /> */}
+          <CartesianGrid strokeDasharray="3 3" stroke="#fff" />
+          <Tooltip />
+          {/* <Legend /> */}
+          <Line
+            type="monotone"
+            dataKey="uv"
+            stroke="#FFCC21"
+            activeDot={{ r: 8 }}
+          />
+          <Line
+            type="monotone"
+            dataKey="pv"
+            stroke="#8FE9D0"
+            activeDot={{ r: 8 }}
+          />
+        </LineChart>
+      </ResponsiveContainer>
     </div>
   );
 }
