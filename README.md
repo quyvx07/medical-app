@@ -25,7 +25,6 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 
 ## NPM SCRIPTS
 `npm run icons`: convert svg icon to js
-`npm install`: install library
 
 ## Learn More
 
