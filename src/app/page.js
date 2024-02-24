@@ -3,6 +3,7 @@ import { IconCup, IconKnife, IconMemo } from "@/icons/common";
 import BaseButton from "@/ui/BaseButton/BaseButton";
 import BaseImage from "@/ui/BaseImage/BaseImage";
 import HexIcon from "@/ui/HexIcon/HexIcon";
+import { clsx } from "@/utils/common";
 import { PHOTOS } from "@/utils/constant";
 import dynamic from "next/dynamic";
 
@@ -11,10 +12,10 @@ const Chart = dynamic(() => import("@/components/Chart/Chart"), { ssr: false });
 export default function Home() {
   return (
     <div>
-      <div className="flex flex-row">
-        <div className={"relative w-[42%]"}>
+      <div className="flex flex-row lg-max:flex-col">
+        <div className={"relative w-[42%] lg-max:w-[100%]"}>
           <BaseImage
-            className={"aspect-[540/316]"}
+            className={"aspect-[540/316] lg-max:w-[100%]"}
             src={"/img/d01.jpg"}
             width={540}
             height={316}
@@ -35,7 +36,7 @@ export default function Home() {
           <Chart />
         </div>
       </div>
-      <div className="flex flex-row gap-[8.4rem] my-[2.5rem] justify-center">
+      <div className="flex flex-row flex-wrap gap-[8.4rem] my-[2.5rem] justify-center">
         <HexIcon title="Morning">
           <IconKnife className="text-white" />
         </HexIcon>
@@ -49,7 +50,13 @@ export default function Home() {
           <IconCup className="text-white" />
         </HexIcon>
       </div>
-      <div className="grid grid-rows-2 grid-cols-4 gap-2 mx-[16rem]">
+      <div
+        className={clsx(
+          "grid auto-rows-fr grid-cols-4 gap-2 mx-[16rem]",
+          "lg-max:mx-[1.6rem]",
+          "lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 xs-max:grid-cols-1"
+        )}
+      >
         {PHOTOS &&
           PHOTOS.map(({ title, src }, idx) => (
             <Photo key={idx} title={title} src={src} width={10} height={10} />

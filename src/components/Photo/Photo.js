@@ -4,7 +4,7 @@ export default function Photo({ title, ...props }) {
   return (
     <div className="relative">
       <BaseImage
-        className="aspect-square w-[23.4rem]"
+        className="aspect-square w-[100%]"
         style={{ objectFit: "cover" }}
         {...props}
       />

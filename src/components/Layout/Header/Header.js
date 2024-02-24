@@ -12,12 +12,12 @@ import { usePathname } from "next/navigation";
 export default function Header() {
   const pathname = usePathname();
   return (
-    <header className="bg-ds-dark-500 text-white px-[16rem] py-4 flex flex-row justify-between">
+    <header className="bg-ds-dark-500 text-white px-[16rem] py-4 flex flex-row justify-between lg-max:px-[1.6rem]">
       <NextLink href="/">
         <Logo className="text-ds-primary-400 ml-4" />
       </NextLink>
       <div className="flex flex-row">
-        <ul className="flex flex-row list-none text-ds-primary-400">
+        <ul className="flex flex-row list-none text-ds-primary-400 lg-max:hidden">
           {NAVIGATION &&
             NAVIGATION.map((value, idx) => (
               <NavItem
