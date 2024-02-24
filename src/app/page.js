@@ -1,13 +1,28 @@
 import Photo from "@/components/Photo/Photo";
 import { IconCup, IconKnife, IconMemo } from "@/icons/common";
 import BaseButton from "@/ui/BaseButton/BaseButton";
+import BaseImage from "@/ui/BaseImage/BaseImage";
 import HexIcon from "@/ui/HexIcon/HexIcon";
 import { PHOTOS } from "@/utils/constant";
+import dynamic from "next/dynamic";
+
+const Chart = dynamic(() => import("@/components/Chart/Chart"), { ssr: false });
 
 export default function Home() {
   return (
     <div>
-      <div className="h-[30.6rem]"></div>
+      <div className="flex flex-row h-[30.6rem]">
+        <BaseImage
+          className={"aspect-[540/316]"}
+          src={"/img/d01.jpg"}
+          width={540}
+          height={316}
+          style={{ objectFit: "cover" }}
+        />
+        <div className="flex-1">
+          <Chart />
+        </div>
+      </div>
       <div className="flex flex-row gap-[8.4rem] my-[2.5rem] justify-center">
         <HexIcon title="Morning">
           <IconKnife className="text-white" />
