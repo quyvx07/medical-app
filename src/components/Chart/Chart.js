@@ -32,7 +32,7 @@ export default function Chart({ className, aspect = 589 / 294 }) {
   return (
     <div
       className={clsx(
-        "bg-ds-dark-600 py-[6px] pl-[54px] pr-[98px]",
+        "bg-ds-dark-600 py-[6px] pl-[54px] pr-[98px] h-[100%]",
         className
       )}
     >

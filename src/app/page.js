@@ -11,9 +11,9 @@ const Chart = dynamic(() => import("@/components/Chart/Chart"), { ssr: false });
 export default function Home() {
   return (
     <div>
-      <div className="flex flex-row h-[30.6rem]">
+      <div className="flex flex-row">
         <BaseImage
-          className={"aspect-[540/316]"}
+          className={"aspect-[540/316] w-[42%]"}
           src={"/img/d01.jpg"}
           width={540}
           height={316}

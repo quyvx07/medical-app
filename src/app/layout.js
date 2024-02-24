@@ -2,6 +2,9 @@ import { Inter, Noto_Sans_JP } from "next/font/google";
 import "./globals.scss";
 import Header from "@/components/Layout/Header/Header";
 import Footer from "@/components/Layout/Footer/Footer";
+import dynamic from "next/dynamic";
+
+const ScrollButton = dynamic(() => import("@/components/ScrollButton/ScrollButton"), { ssr: false });
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const notoSansJP = Noto_Sans_JP({
@@ -22,6 +25,7 @@ export default function RootLayout({ children }) {
           <Header />
           {children}
           <Footer />
+          <ScrollButton/>
         </main>
       </body>
     </html>
