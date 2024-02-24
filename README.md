@@ -3,10 +3,6 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 ## Lib
 node: v18.17.1
 
-## NPM SCRIPTS
-`npm run icons`: convert svg icon to js
-`npm install`: install library
-
 ## Getting Started
 
 First, run the development server:
@@ -26,6 +22,10 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+
+## NPM SCRIPTS
+`npm run icons`: convert svg icon to js
+`npm install`: install library
 
 ## Learn More
 
